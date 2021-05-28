@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: rgb(26, 7, 199);
+}
+#main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+#box1 {
+  width: 530px;
+  height: 625px;
+  background-image: url(img/20210515_083356.jpg);
+  position: absolute;
+  bottom: -100;
+  left: 30%;
+  animation: move 2s forwards, moves 3s forwards 3s;
+}
+#box1::after {
+  content: "";
+  position: absolute;
+  width: 530px;
+  height: 625px;
+  background-image: url(img/coldplay.png);
+  left: 0;
+  z-index: -1;
+}
+@keyframes move {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+@keyframes moves {
+  from {
+    left: 30%;
+    width: 530px;
+  }
+  to {
+    width: 0;
+    left:  50%;
+  }
+}
