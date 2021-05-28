@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background-color: rgb(0, 0, 0);
+  transition: all 2s;
 }
 #main {
   width: 100%;
@@ -19,24 +20,26 @@ body {
   width: 530px;
   height: 625px;
   background-image: url(img/20210515_083356.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(0, 0, 0);
   position: absolute;
   bottom: -100%;
   left: 30%;
-  animation: move 2s forwards, moves 3s forwards 3s;
+  animation: anim3 2s forwards, moves 3s forwards 3s;
 }
 #box1::after {
   content: "";
   position: absolute;
   width: 530px;
   height: 625px;
-  background-image: url(img/coldplay.png);
+  background-image:  url(img/coldplay.png);
+  background-color: rgb(13, 114, 117);
   background-repeat: no-repeat;
   left: 0;
   z-index: -1;
 }
-@keyframes move {
+@keyframes anim3 {
   from {
     bottom: -100%;
   }
@@ -66,13 +69,6 @@ body {
   left: 100px;
   overflow: hidden;
 }
-p {
- font-size: 16px;
- display: inline;
-}
-span {
-  color: rgb(0, 110, 255);
-}
 #text {
   position: relative;
   left: -100%;
@@ -86,37 +82,44 @@ span {
     left: 0%;
   }
 }
+span {
+  color: rgb(17, 190, 221);
+}
+
 #box3 {
   overflow: hidden;
-  color: #fff;
 }
 #container {
   width: 100%;
   position: absolute;
   top: -100%;
-  animation: ani2 forwards 2.5s;
+  animation: ani2 2s forwards 2.5s;
 }
 @keyframes ani2 {
   from {
     top: -100%;
   }
   to {
-    top: -100%;
+    top: 0%;
   }
 }
 #logo {
   float: left;
-  margin-left: -100px;
-  margin-top: 20px;
+  margin-left: 100px;
+  margin-top: 15px;
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+  color: rgb(83, 221, 255);
 }
-#logo img {
+/* #logo img {
   width: 50px;
-}
+} */
 #nav {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
   color: #fff;
   letter-spacing: 2px;
-  margin-right: 40px;
+  margin-right: 100px;
   margin-top: 5px;
   float: right;
 }
@@ -124,6 +127,7 @@ span {
   list-style: none;
 }
 #nav ul li {
+  transition: all 2s;
   display: inline-block;
-  margin-left: 100px;
+  margin-left: 130px;
 }
