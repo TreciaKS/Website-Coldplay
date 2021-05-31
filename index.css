@@ -7,6 +7,7 @@
 html {
     font-size: 85%;
     scroll-behavior: smooth;
+    font-family: sans-serif;
   }
 body {
   margin: 0;
@@ -148,7 +149,107 @@ span {
   display: none;
 }
 
+#songs {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 227, 227);
+}
+.music-container {
+  width: 350px;
+  background-color: rgb(70, 101, 107);
+  border-radius: 15px;
+  box-shadow: 15px 20px 30px rgba(19, 18, 18, 0.5);
+  display: flex;
+  padding: 20px 30px;
+  position: relative;
+  margin: 100px 0;
+  z-index: 10;
+}
+.img-container {
+  position: relative;
+  width: 110px;
+}
 
+.img-container img {
+  width: inherit;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 2px 9px 12px 5px rgba(0, 0, 0, 0.74);
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+.music-container.play .img-container img {
+  /* animation-play-state: running; */
+}
+.music-info h4 {
+  font-size: 20px;
+}
+.progress-container {
+  background: #cecdcd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0px 0 10px -20px;
+  height: 6px;
+  width: 100%;
+}
+.progress {
+  background-color: rgb(206, 65, 225);
+  border-radius: 5px;
+  height: 100%;
+  width: 50%;
+  transition: width .1s linear;
+}
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.action-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+.action-btn-big {
+  color: #fff;
+  font-size: 30px;
+}
+.action-btn:focus {
+  outline: 0;
+}
+.music-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  padding: 0 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform .3s ease-in, opacity .3s ease-in;
+}
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* Responsiveness!!! */
 /* Media Queries */
