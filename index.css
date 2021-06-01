@@ -5,7 +5,6 @@
   font-family: sans-serif;
 } */
 html {
-    font-size: 18px;
     scroll-behavior: smooth;
     font-family: sans-serif;
   }
@@ -41,10 +40,11 @@ a {
   content: "";
   position: absolute;
   width: 530px;
-  height: 655px;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.281)) ,url(img/coldplay.png);
+  height: 755px;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.479), rgba(17, 17, 17, 0.705)) ,url(img/coldplay.png);
   background-color: rgb(13, 114, 117);
-  background-repeat: no-repeat;
+  background-repeat: 
+  no-repeat;
   left: 0;
   z-index: -1;
 }
@@ -123,16 +123,21 @@ span {
   width: 50px;
 } */
 #nav {
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: 2px;
-  margin-right: 60px;
   margin-top: -25px;
+  margin-right: 60px;
   float: right;
+}
+#nav a {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
 }
 #nav ul {
   list-style: none;
+}
+ #nav ul li a:active {
+  color: rgb(255, 255, 255);
 }
 #nav ul li {
   transition: all 2s;
@@ -148,15 +153,35 @@ span {
 #check {
   display: none;
 }
+.wrapper {
+  padding: 20px 35px;
+}
 #about {
   position: relative;
-  top: 620px;
+  top: 635px;
   margin: 0;
+  height: 115vh;
+  background-color: rgb(233, 227, 227);
+}
+
+.coldplay-img {
+  position: relative;
   display: flex;
+  padding-top: 50px;
+  margin-bottom: 30px;
+  margin: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+}
+.coldplay-img img {
+  width: 450px;
+  position: relative;
+  box-shadow: 2px 9px 10px 5px rgba(0, 0, 0, 0.74);
+}
+#about a{
+  text-decoration: underline;
+  color: rgb(16, 159, 202);
 }
 #albums {
   position: relative;
@@ -166,7 +191,7 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(233, 227, 227);
 }
 .alb-img img{
   width: 90px;
@@ -209,6 +234,16 @@ span {
   box-shadow: 2px 9px 12px 5px rgba(0, 0, 0, 0.74);
   /* animation: rotate 3s linear infinite;
   animation-play-state: paused; */
+}
+#streaming {
+  position: relative;
+  top: 610px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 227, 227);
 }
 /* .music-container.play .img-container img {
   animation-play-state: running;
@@ -275,19 +310,13 @@ span {
     transform: rotate(360deg);
   }
 }
-#streaming {
-  position: relative;
-  top: 610px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(233, 227, 227);
-}
+
 /* Responsiveness!!! */
 /* Media Queries */
 @media (max-width: 1210px) {
+  html {
+   font-size: 85%;
+  }
   #box1 {
   background-color: rgb(0, 0, 0);
   position: absolute;
@@ -301,10 +330,12 @@ span {
   left: 50px;
 }
 #nav {
-  margin-right: 50px;
-  margin-top: -20px;
+  margin-right: 40px;
+  margin-top: -15px;
+
 }
 #nav ul li {
+  margin-top: -28px;
   margin-left: 60px;
 }
 #logo {
@@ -312,7 +343,7 @@ span {
 }
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 1030px) {
   html {
     font-size: 16px;
   }
@@ -332,6 +363,15 @@ span {
   display: block;
   z-index: 10;
 }
+#nav a {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+#nav ul li a:hover {
+  color: rgb(3, 134, 123);
+}
 #nav {
   font-size: 15px;
   font-weight: 600;
@@ -343,14 +383,17 @@ span {
 }
 
 #nav ul li {
-  margin-top: 55px;
   margin-left: -20px;
+  margin-top: 25px;
+  padding: 15px;
 }
+  
 ul {
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(10px);
-  background-color: rgba(83, 221, 255, 0.26);
+  backdrop-filter: blur(20px);
+  background-color: rgba(10, 54, 54, 0.473);
+  color: #fff;
   width: 14%;
   height: 100vh;
   text-align: center;
@@ -374,9 +417,7 @@ ul {
 }
 }
 @media (max-width: 650px) {
-  html {
-    font-size 10px;
-  }
+  
   #box1 {
   width: 100%;
   position: absolute;
@@ -402,8 +443,8 @@ ul {
 ul {
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(10px);
-  background-color: rgba(83, 221, 255, 0.26);
+  backdrop-filter: blur(20px);
+  background-color: rgba(10, 54, 54, 0.473);
   width: 35%;
   height: 100vh;
   text-align: center;
