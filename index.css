@@ -157,7 +157,8 @@ span {
   display: none;
 }
 .wrapper {
-  padding: 5vw;
+  padding: 3vw;
+  padding-bottom: 0;
 }
 .heading, #albums a {
   color: rgb(0, 0, 0);
@@ -167,6 +168,7 @@ span {
 
 #about {
   position: relative;
+  height: 115vh;
   top: 635px;
   margin: 0;
   background-color: rgb(233, 227, 227);
@@ -213,10 +215,11 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 .alb-img img{
   width: 420px;
-  
+  box-shadow: 2px 9px 10px 5px rgba(0, 0, 0, 0.74);
 }
 #songs {
   position: relative;
@@ -236,11 +239,11 @@ span {
   width: 340px;
   background-color: rgb(243, 243, 243);
   border-radius: 55px;
-  padding: 10px 35px;
+  padding: 5px 20px;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 35px;
   margin-bottom: 30px;
-  box-shadow: 2px 7px 12px 5px rgba(0, 0, 0, 0.541),  -2px -9px 12px 0 rgba(255, 255, 255, 0.74);
+  box-shadow: 2px 8px 12px 0px rgba(0, 0, 0, 0.541);
 }
 .img-container {
   position: relative;
@@ -253,9 +256,9 @@ span {
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
-  bottom: -29px;
-  left: 8px;
-  box-shadow: 2px 9px 12px 5px rgba(0, 0, 0, 0.74);
+  bottom: -25px;
+  left: 0;
+  box-shadow: 2px 9px 12px 7px rgba(0, 0, 0, 0.74);
 }
 #streaming {
   position: relative;
@@ -278,77 +281,13 @@ span {
   filter: drop-shadow(9px 4px 4px rgb(0, 0, 0));
 }
 .stream-img img {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: 90px;
   filter: drop-shadow(10px 4px 4px rgb(0, 0, 0));
 }
-
-
-/* .music-container.play .img-container img {
-  animation-play-state: running;
-}
-.music-info h4 {
-  font-size: 20px;
-}
-.progress-container {
-  background: #cecdcd;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 0px 0 10px -20px;
-  height: 6px;
-  width: 100%;
-}
-.progress {
-  background-color: rgb(206, 65, 225);
-  border-radius: 5px;
-  height: 100%;
-  width: 50%;
-  transition: width .1s linear;
-}
-.nav-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-.action-btn {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  padding: 10px;
-  margin: 0 15px;
-  cursor: pointer;
-}
-.action-btn-big {
-  color: #fff;
-  font-size: 30px;
-}
-.action-btn:focus {
-  outline: 0;
-}
-.music-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250px;
-  padding: 0 10px 10px 150px;
-  opacity: 0;
-  transform: translateY(0%);
-  transition: transform .3s ease-in, opacity .3s ease-in;
-}
-.music-container.play .music-info {
-  opacity: 1;
-  transform: translateY(-100%);
-} */
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer a {
+  color: rgb(1, 133, 23);
 }
 
 /* Responsiveness!!! */
@@ -453,6 +392,13 @@ ul {
   top: 625px;
   height: 130vh;
 }
+footer {
+  font-size: 12px; 
+}
+#about {
+  height: 135vh;
+}
+
 }
 
 @media (max-width: 650px) {
@@ -488,7 +434,10 @@ ul {
   top: 20px;
   transition: all .5s;
 }
-.music-container {
+#about {
+  height: 145vh;
+}
+/* .music-container {
   width: 190px;
   margin-top: 30px; 
   padding: 5px 20px; 
@@ -501,14 +450,47 @@ ul {
 }
 
 .img-container img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
+} */
 }
-.stream-icons img {
+@media ( max-width: 490px) {
+  .stream-icons img {
+  padding: 10px 5px;
   width: 25px;
 }
 .stream-img img {
-  padding: 8px;
+  padding: 5px;
   width: 65px;
+}
+.coldplay-img{
+  padding-top: 30px;
+}
+.coldplay-img img, .coldplay-img2 img {
+  width: 250px;
+}
+#about {
+  height: 120vh;
+}
+.alb-img img{
+  padding-top: 0px;
+  width: 240px;
+}
+.music-container {
+  width: 250px;
+  margin-left: -22px;
+  padding: 0 2px;
+}
+.img-container {
+  width: 70px;
+}
+audio {
+  width: 450px;
+}
+.img-container img {
+  width: inherit;
+  height: 70px;
+  bottom: -20px;
+  left: -13px;
 }
 }
