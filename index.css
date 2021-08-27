@@ -26,7 +26,7 @@ a {
 }
 #box1 {
   width: 530px;
-  height: 655px;
+  height: 645px;
   background-image: url(img/20210515_083356.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,8 +40,9 @@ a {
   content: "";
   position: absolute;
   width: 530px;
-  height: 755px;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.479), rgba(17, 17, 17, 0.705)) ,url(img/coldplay.png);
+  /* height: 645px; */
+  height: 100%;
+  background-image:  linear-gradient(45deg, rgba(0, 0, 0, 0.479), rgba(17, 17, 17, 0.705)) ,url(img/coldplay.png);
   background-color: rgb(13, 114, 117);
   background-repeat: 
   no-repeat;
@@ -160,7 +161,7 @@ span {
   padding: 3vw;
   padding-bottom: 0;
 }
-.heading, #albums a {
+.heading {
   color: rgb(0, 0, 0);
   text-shadow: 2px -2px 2px rgba(0, 0, 0, .4),
             -2px -2px 2px rgba(255, 255, 255, 1);
@@ -168,8 +169,8 @@ span {
 
 #about {
   position: relative;
-  height: 115vh;
-  top: 635px;
+  height: 135vh;
+  top: 755px;
   margin: 0;
   background-color: rgb(233, 227, 227);
 }
@@ -177,7 +178,7 @@ span {
 .coldplay-img{
   position: relative;
   display: flex;
-  padding-top: 80px;
+  padding-top: 40px;
   margin: 0;
   flex-direction: column;
   align-items: center;
@@ -317,6 +318,9 @@ footer a {
 #logo {
   margin-left: 50px;
 }
+#about {
+  height: 138vh;
+}
 }
 
 @media (max-width: 1030px) {
@@ -348,7 +352,7 @@ footer a {
 #nav {
   font-size: 15px;
   font-weight: 600;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   letter-spacing: 2px;
   float: right;
   margin-right: 10px;
@@ -364,11 +368,11 @@ footer a {
 ul {
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(20px);
   box-shadow: -4px -4px 8px #000;
   color: #fff;
   width: 14%;
   height: 100vh;
+  background-color: #ddd;
   text-align: center;
   position: fixed;
   right: -100%;
@@ -389,14 +393,13 @@ ul {
   right: 0;
 }
 #about {
-  top: 625px;
-  height: 130vh;
+  top: 669px;
 }
 footer {
   font-size: 12px; 
 }
 #about {
-  height: 135vh;
+  height: 128vh;
 }
 
 }
@@ -435,7 +438,7 @@ ul {
   transition: all .5s;
 }
 #about {
-  height: 145vh;
+  height: 136vh;
 }
 }
 @media ( max-width: 490px) {
@@ -454,7 +457,7 @@ ul {
   width: 250px;
 }
 #about {
-  height: 120vh;
+  height: 107vh;
 }
 .alb-img img{
   padding-top: 0px;
