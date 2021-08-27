@@ -20,7 +20,7 @@ a {
 }
 #main {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   position: absolute;
   overflow: hidden;
 }
@@ -153,6 +153,7 @@ span {
 }
 .checkbtn img {
    display: inline;
+   filter: drop-shadow(0 0 1px #fff)
 }
 #check {
   display: none;
@@ -170,7 +171,7 @@ span {
 #about {
   position: relative;
   height: 135vh;
-  top: 755px;
+  top: 775px;
   margin: 0;
   background-color: rgb(233, 227, 227);
 }
@@ -318,9 +319,6 @@ footer a {
 #logo {
   margin-left: 50px;
 }
-#about {
-  height: 138vh;
-}
 }
 
 @media (max-width: 1030px) {
@@ -393,21 +391,23 @@ ul {
   right: 0;
 }
 #about {
-  top: 669px;
+  /* top: 669px; */
+  top: 850px;
 }
 footer {
   font-size: 12px; 
 }
-#about {
-  height: 128vh;
-}
-
 }
 
 @media (max-width: 650px) {
+  #box1::after {
+  height: 100%;
+  background-image: url(img/coldplay.png);
+  background-color: #000;
+}
   #box1 {
   width: 100%;
-  background-size: 700px;
+  background-size: 100%;
   left: 0px;  
   }
   #box2 {
@@ -438,7 +438,7 @@ ul {
   transition: all .5s;
 }
 #about {
-  height: 136vh;
+  height: 870px;
 }
 }
 @media ( max-width: 490px) {
@@ -457,7 +457,7 @@ ul {
   width: 250px;
 }
 #about {
-  height: 107vh;
+  /* height: 70vh; */
 }
 .alb-img img{
   padding-top: 0px;
